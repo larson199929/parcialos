@@ -1,0 +1,74 @@
+<main id="loginContainer">
+  <mat-card id="loginImgCard">
+      <img mat-card-image [src]="loginImgSource" alt="traveling map">
+  </mat-card>
+
+  <mat-card id="loginForm">
+
+    <!-- Card Header -->
+    <mat-card-header id="loginHeader">
+      <mat-card-title>
+        Login
+      </mat-card-title>
+    </mat-card-header>
+
+    <!--(submit)="submitForm()" don't forget to add this in the form tag ⬇ -->
+    <form [formGroup]="loginForm" (submit)="submitForm()">
+      <mat-card-content>
+        <mat-grid-list  cols="1" rowHeight="1:0.1">
+
+          <!-- DNI -->
+          <mat-grid-tile id="dniContainer">
+            <mat-form-field appereance="fill" class="full-width">
+
+              <mat-label>DNI</mat-label>
+              <input type="text" matInput formControlName="dni">
+
+              <mat-error *ngIf="dni?.errors?.['required']">DNI is <strong>required</strong></mat-error>
+
+              <mat-error *ngIf="dni?.errors?.['pattern'] && !dni?.errors?.['required']">Phone must have only <strong>numbers</strong></mat-error>
+
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <!-- Password -->
+          <mat-grid-tile id="passwordContainer">
+            <mat-form-field appereance="fill" class="full-width">
+
+              <mat-label>Password</mat-label>
+              <input type="password" matInput formControlName="password">
+
+              <mat-error *ngIf="password?.errors?.['required']">Password is <strong>required</strong></mat-error>
+
+              <mat-error *ngIf="password?.errors?.['minlength'] && !password?.errors?.['required']">Password must be have at least <strong>8</strong> characters</mat-error>
+
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile id="forgotPasswordSection">
+            <a  routerLink="/change" href="#" id="forgotPassword"><strong>I forgot my password</strong></a>
+          </mat-grid-tile>
+
+          <mat-grid-tile id="signUpSection">
+            <p id="signUp">You do not have an account? <strong><a routerLink="/signUp" href="">Sign Up</a></strong></p>
+          </mat-grid-tile>
+
+
+        </mat-grid-list>
+      </mat-card-content>
+
+      <!-- button -->
+      <mat-card-actions id="loginButtonContainer">
+        <button [disabled]="!loginForm.valid" mat-flat-button color="primary" type="submit">Login</button>
+      </mat-card-actions>
+
+      <!-- this part will be displayed, only if submitted is true -->
+      <!--
+      <ng-template [ngIf]="submitted">
+        <span>Form Submitted Successfully!</span>
+      </ng-template>
+    -->
+    </form>
+
+  </mat-card>
+</main>

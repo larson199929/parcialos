@@ -1,0 +1,113 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "photo": "Home",
+      "first_name": "Carlos",
+      "second_name": "Urquiaga Quesquen",
+      "email": "carlos@upc.edu.pe",
+      "phone": "456123789",
+      "password": "asdfghjkl"
+    },
+    {
+      "id": 2,
+      "photo": "Home",
+      "first_name": "Ana Perez",
+      "second_name": "Urquiaga Rodriguez",
+      "email": "rafael@upc.edu.pe",
+      "phone": "456123789",
+      "password": "asdfghjkl"
+    },
+    {
+      "dni": "45454545",
+      "name": "Edgar Alexander Malca Rojas",
+      "genre": "Male",
+      "month": "12",
+      "day": "23",
+      "year": "1235",
+      "email": "edagar@ips",
+      "phone": "965785555",
+      "address": "sassssssssssssss",
+      "password": "ssssssssssssssssssssss",
+      "id": 3
+    },
+    {
+      "dni": "78945612",
+      "name": "Ana Perez",
+      "genre": "no binario",
+      "month": "12",
+      "day": "27",
+      "year": "2012",
+      "email": "ana@gmail",
+      "phone": "77777777",
+      "address": "Calle Picapanto",
+      "password": "alpaca",
+      "id": 4
+    },
+    {
+      "name": "Rodolfo el reno",
+      "phone": "123456789",
+      "dni": "12345678",
+      "month": "12",
+      "day": "27",
+      "year": "2012",
+      "email": "rodolfo@gmail.com",
+      "password": "narizroja",
+      "genre": "animal",
+      "address": "polo norte",
+      "id": 5
+    },
+    {
+      "name": "Edgar Alexander Malca Rojas",
+      "phone": "987654123",
+      "dni": "45789856",
+      "month": "45",
+      "day": "23",
+      "year": "1235",
+      "email": "edgar@upc",
+      "password": "128965",
+      "genre": "Male",
+      "address": "Av. Manuel J. Clouthier, San Pedro Garza García",
+      "id": 6
+    },
+    {
+      "name": "Edgar Alexander Malca Rojas",
+      "phone": "548595",
+      "dni": "45454545",
+      "month": "12",
+      "day": "23",
+      "year": "1235",
+      "email": "Lima@s",
+      "password": "12344",
+      "genre": "Male",
+      "address": "Ciudad de México",
+      "id": 7
+    },
+    {
+      "name": "Edgar Alexander Malca Rojas",
+      "phone": "999888777",
+      "dni": "45454545",
+      "month": "1",
+      "day": "1",
+      "year": "1",
+      "email": "edaea@dsda",
+      "password": "sssss",
+      "genre": "Male",
+      "address": "Cipriano ",
+      "id": 8
+    },
+    {
+      "name": "Edgar Alexander Malca Rojas",
+      "phone": "885555555",
+      "dni": "45454545",
+      "month": "12",
+      "day": "23",
+      "year": "1235",
+      "email": "edafar@e",
+      "password": "12345",
+      "genre": "Male",
+      "address": "edadad",
+      "id": 9
+    }
+  ]
+}

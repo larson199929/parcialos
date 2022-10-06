@@ -1,0 +1,53 @@
+#loginContainer {
+  /*border: 5px solid lightseagreen;*/
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 7% 0;
+}
+
+#loginImgCard {
+  width: 40%;
+  padding: 0;
+  border-radius: 5%;
+}
+
+#loginImgCard img{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: inherit;
+}
+
+#loginForm {
+  border: 3px solid cornflowerblue;
+  width: 35%;
+  border-radius: 5%;
+}
+
+#loginHeader {
+  /*border: 5px solid orange;*/
+}
+
+#dniContainer {
+  /*border: 5px solid olive;*/
+}
+
+#passwordContainer {
+  /*border: 5px solid mediumpurple;*/
+}
+
+#forgotPasswordSection {
+  /*border: 5px solid cornflowerblue;*/
+}
+
+#signUpSection {
+  /*border: 5px solid springgreen;*/
+}
+
+#loginButtonContainer {
+  /*border: 5px solid orange;*/
+  display: flex;
+  justify-content: center;
+}
+

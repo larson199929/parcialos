@@ -1,0 +1,45 @@
+div{
+    /*border: 1px solid black;*/
+    width: 80%;
+    margin: 50px auto;
+}
+
+mat-card{
+    /*border: 1px solid green;*/
+}
+
+form{
+    /*order: 1px solid blue;*/
+}
+
+mat-card-content{
+    /*border: 1px solid black;*/
+}
+
+.full-width{
+    width: 70%;
+}
+
+.divImage{
+    height: 350px;
+    width: 350px;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+@media (max-width: 800px) {
+    .divImage{
+        height:30vw;
+        width: 30vw;
+        padding: 10%;
+    }
+    .full-width{
+        width: 100%;
+    }
+  }

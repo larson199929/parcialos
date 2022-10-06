@@ -1,0 +1,31 @@
+.welcomeContainer {
+  /*border: 5px solid lightseagreen;*/
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 7% 0;
+}
+
+.welcomeImgCard {
+  border-radius: 5%;
+}
+.pading-h{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.colum{
+  display:flex;
+  flex-direction: column;
+}
+.row{
+  display:flex;
+  flex-direction: row;
+}
+.w-full{
+  width: 100%;
+}
+.center-item{
+  justify-content: center;
+}
+

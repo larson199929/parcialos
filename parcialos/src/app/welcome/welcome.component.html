@@ -1,0 +1,24 @@
+<main class="welcomeContainer">
+<div class="colum w-full center-item" >
+  <h1 style="text-align:center">How Would you like to log in </h1>
+  <div class="row w-full center-item">
+     <div class="pading-h">
+       <mat-card class="welcomeImgCard ">
+         <img (click)="redirectToLogin() " mat-card-image [src]="welcomeImgSource" alt="traveling">
+         <h1 style="text-align:center">Traveler </h1>
+        </mat-card>
+      </div>
+      <div class="pading-h">
+        <mat-card class="welcomeImgCard">
+          <img (click)="redirectToLogin() " mat-card-image [src]="welcomeImg2Source" alt="buyer">
+          <h1 style="text-align:center">Buyer </h1>
+        </mat-card>
+      </div>
+  </div>
+</div>
+
+
+</main>
+
+  <footer class="pading-h" style="text-align:left">Import it 2022| All right reserved</footer>
+  <footer class="pading-h" style="text-align:right">Terms and condition</footer>

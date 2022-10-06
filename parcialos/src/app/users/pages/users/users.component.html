@@ -1,0 +1,131 @@
+<h1 class="title">New User Registration</h1>
+
+<div class="form-container">
+    <form (submit)="onSubmit()" #userForm="ngForm" [formGroup]="registerForm">
+
+        <mat-card-content>
+            <mat-grid-list cols="2" rowHeight="3:1">
+
+                <mat-card-title class="pre-title">Personal information</mat-card-title>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <input matInput placeholder="DNI" name="dni" formControlName="dni" required
+                            [(ngModel)]="userData.dni" />
+                        <mat-error *ngIf="dni?.errors?.['required']">DNI is <strong>required</strong></mat-error>
+                        <mat-error
+                            *ngIf="dni?.errors?.['minlength'] || dni?.errors?.['maxlength'] && !dni?.errors?.['required']">
+                            DNI must be <strong>8 numbers</strong> length
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <input matInput placeholder="Name" name="name" formControlName="name" required
+                            [(ngModel)]="userData.name" />
+                        <mat-error *ngIf="name?.errors?.['required']"> Full Name is<strong>required</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <input matInput placeholder="Genre" name="genre" formControlName="genre" required
+                            [(ngModel)]="userData.genre" />
+                        <mat-error *ngIf="genre?.errors?.['required']"> Full Name is<strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" class="dated">
+                        <input matInput placeholder="Month" name="month" formControlName="month" required
+                            [(ngModel)]="userData.month" />
+                            <mat-error *ngIf="month?.errors?.['required']">Month is <strong>required</strong></mat-error>
+                        <mat-error *ngIf="month?.errors?.['pattern'] && !month?.errors?.['required']">
+                           Month must have only <strong>numbers</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="dated">
+                        <input matInput placeholder="Day" name="day" formControlName="day" required
+                            [(ngModel)]="userData.day" />
+                        <mat-error *ngIf="day?.errors?.['required']">Day is <strong>required</strong></mat-error>
+                        <mat-error *ngIf="day?.errors?.['pattern'] && !day?.errors?.['required']">
+                            Day must have only <strong>numbers</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="dated">
+                        <input matInput placeholder="Year" name="year" formControlName="year" required
+                            [(ngModel)]="userData.year" />
+                        <mat-error *ngIf="year?.errors?.['required']">Year is <strong>required</strong></mat-error>
+                        <mat-error *ngIf="year?.errors?.['pattern'] && !year?.errors?.['required']">
+                            Year must have only <strong>numbers</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+            <mat-grid-list cols="2" rowHeight="3:1">
+                <mat-card-title class="pre-title">Contact</mat-card-title>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" class="full-width">
+
+                        <input type="text" matInput formControlName="email" placeholder="Ex. example@upc.edu.pe"
+                            required [(ngModel)]="userData.email" />
+                        <mat-error *ngIf="email?.errors?.['required']">Email is <strong>required</strong> </mat-error>
+                        <mat-error *ngIf="email?.errors?.['email'] && !email?.errors?.['required']">
+                            Please enter a valid email address
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" class="full-width">
+
+                        <input type="text" matInput formControlName="phone" placeholder="Ex. 964258795" required
+                            [(ngModel)]="userData.phone" />
+                        <mat-error *ngIf="phone?.errors?.['required']">Phone is <strong>required</strong> </mat-error>
+                        <mat-error *ngIf="phone?.errors?.['pattern'] && !phone?.errors?.['required']">
+                            Phone must have only <strong>numbers</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Address</mat-label>
+                        <input type="text" matInput formControlName="address" placeholder="Ex. Calle Pariahuanca 123"
+                            required [(ngModel)]="userData.address" />
+                        <mat-error *ngIf="address?.errors?.['required']">Address is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password" required
+                            [(ngModel)]="userData.password" />
+                        <mat-error *ngIf="password?.errors?.['required'] ">Password is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="password?.errors?.['minlength'] && !password?.errors?.['required']">
+                            Password must be at least <strong>5</strong> characters length
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+
+            </mat-grid-list>
+
+
+        </mat-card-content>
+
+        <button [disabled]="!userForm.valid" mat-flat-button color="primary" type="submit">Submit</button>
+
+    </form>
+
+</div>
